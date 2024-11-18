@@ -17,19 +17,17 @@ export async function registerUser(
 			};
 		}
 
-		const user = await prisma.$transaction(async (tx) => {
-			return tx.user.create({
-				data: {
-					name: capitalizeWord(name),
-					email: email.toLowerCase(),
-					password: bcrypt.hashSync(password),
-				},
-				select: {
-					id: true,
-					name: true,
-					email: true,
-				},
-			});
+		const user = await prisma.user.create({
+			data: {
+				name: capitalizeWord(name),
+				email: email.toLowerCase(),
+				password: bcrypt.hashSync(password),
+			},
+			select: {
+				id: true,
+				name: true,
+				email: true,
+			},
 		});
 
 		return {
@@ -38,8 +36,6 @@ export async function registerUser(
 			user: user,
 		};
 	} catch (error) {
-		console.error('Error de Prisma: ', error);
-
 		return {
 			ok: false,
 			message: 'Error al crear el usuario',

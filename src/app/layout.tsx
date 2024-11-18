@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { inter } from '@/config/fonts';
+import { roboto } from '@/config/fonts';
 import { ProviderSession } from '@/components';
 import './globals.css';
 
@@ -17,8 +17,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body className={inter.className}>
+		<html lang='es'>
+			<body className={roboto.className}>
 				<ProviderSession>{children}</ProviderSession>
 			</body>
 		</html>

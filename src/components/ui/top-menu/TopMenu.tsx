@@ -21,7 +21,11 @@ export function TopMenu() {
 		<nav className='flex px-5 justify-between items-center w-full'>
 			<div>
 				<Link href='/'>
-					<span className={`${titleFont.className} antialiased font-bold`}>
+					<span
+						className={`${
+							loaded ? titleFont.className : ''
+						} antialiased font-bold`}
+					>
 						Teslo
 					</span>
 					<span> | Shop</span>

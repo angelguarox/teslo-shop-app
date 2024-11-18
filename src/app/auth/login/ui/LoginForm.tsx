@@ -43,6 +43,7 @@ export function LoginForm() {
 			<input
 				type='email'
 				name='email'
+				autoFocus
 				className='px-5 py-2 bg-gray-200 rounded mb-5 border-b-2 border-gray-200 focus:outline-none focus:border-blue-500'
 			/>
 			<label htmlFor='password'>Contraseña</label>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { registerUser } from '@/actions';
+import { login, registerUser } from '@/actions';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -32,7 +32,8 @@ export function RegisterForm() {
 			return;
 		}
 
-		console.log(response.user);
+		await login(email, password);
+		window.location.replace('/');
 	};
 
 	return (

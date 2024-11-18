@@ -14,7 +14,8 @@ This store is an organized and correct implementation of Next.js, where you lear
 4. Raise the database with `docker compose up -d`.
 5. Do the database migrations with Prisma and the `npx prisma migrate dev` command.
 6. Run seed with `npm run seed`.
-7. Run the project with `npm run dev`.
+7. Clear browser's localStorage.
+8. Run the project with `npm run dev`.
 
 ---
 
@@ -32,4 +33,5 @@ Esta tienda es una implementación organizada y correcta de Next.js, donde se ap
 4. Levantar la base de datos con `docker compose up -d`.
 5. Hacer las migraciones de la base de datos con Prisma y el comando `npx prisma migrate dev`.
 6. Ejecutar seed con `npm run seed`.
-7. Correr el proyecto con `npm run dev`.
+7. Limpiar localStorage del navegador.
+8. Correr el proyecto con `npm run dev`.
